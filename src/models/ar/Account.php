@@ -132,7 +132,7 @@ class Account extends \CActiveRecord
     
     public function beforeSave() {
         if ($this->isNewRecord) {
-            $this->createdAt = new CDbExpression('getdate()');
+            $this->createdAt = new \CDbExpression('getdate()');
         }
         return parent::beforeSave();
     }
