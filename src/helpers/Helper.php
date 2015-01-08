@@ -25,7 +25,7 @@ class Helper
      */
     public static function sqlNow()
     {
-        return \Yii::app()->db->createCommand('SELECT NOW()')->queryScalar();
+        return \Yii::app()->db->createCommand('SELECT GETDATE()')->queryScalar();
     }
 
     /**
