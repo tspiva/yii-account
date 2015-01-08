@@ -51,4 +51,11 @@ class AccountPasswordHistory extends \CActiveRecord
     {
         return parent::model($className);
     }
+    
+    public function beforeSave() {
+        if ($this->isNewRecord) {
+            $this->createdAt = new CDbExpression('getdate()');
+        }
+        return parent::beforeSave();
+    }
 }
