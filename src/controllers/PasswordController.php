@@ -98,6 +98,11 @@ class PasswordController extends Controller
         $this->render('forgot', array('model' => $model));
     }
 
+    public function actionSent()
+    {
+        $this->render('sent');
+    }
+
     /**
      * Displays the 'reset password' page.
      *
