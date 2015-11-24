@@ -284,4 +284,12 @@ class Module extends \CWebModule
 
         return $this->classMap[$type];
     }
+
+    /**
+     * Allows custom modules to override what database to use
+     */
+    public function getDBConnection()
+    {
+        return \Yii::app()->db;
+    }
 }
