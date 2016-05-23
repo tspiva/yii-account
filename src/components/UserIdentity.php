@@ -59,8 +59,8 @@ class UserIdentity extends \CUserIdentity
             array(
                 'condition' => 'username=:username OR email=:email',
                 'params' => array(
-                    ':username' => strtolower($this->username),
-                    ':email' => $this->username,
+                    ':username' => $this->username,
+                    ':email' => strtolower($this->username),
                 ),
             )
         );
